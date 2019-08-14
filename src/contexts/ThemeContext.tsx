@@ -6,13 +6,16 @@ const state = {
     dark: { syntax: '#ddd', ui: '#333', background: '#555' }
 }
 
-
 export const ThemeContext = createContext(state);
 
-function ThemeContextProvider(props: { children: React.ReactNode; }) {
+function ThemeContextProvider(props: { children: React.ReactNode }) {
     return (
         <ThemeContext.Provider value={{...state}}>
-            { props.children }
+            <>
+                <div className='ThemeContextConsumer'>
+                    { props.children }
+                </div>
+            </>
         </ThemeContext.Provider>
     );
 }
