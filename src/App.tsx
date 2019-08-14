@@ -6,7 +6,7 @@ import {ThemeContext} from "./contexts/ThemeContext";
 const App: React.FC = () => {
   return (
     <div className="App">
-      <ThemeContext.Consumer>
+      <ThemeContext.Provider>
         {
           (value) => {
               return <>
@@ -15,7 +15,7 @@ const App: React.FC = () => {
               </>
           }
         }
-      </ThemeContext.Consumer>
+      </ThemeContext.Provider>
     </div>
   );
 }
