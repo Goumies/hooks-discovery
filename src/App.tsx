@@ -1,12 +1,15 @@
 import React from 'react';
 import NavBar from "./components/NavBar";
 import BookList from "./components/BookList";
+import ThemeContextProvider from "./contexts/ThemeContext";
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <NavBar />
-      <BookList />
+      <ThemeContextProvider>
+        <NavBar />
+        <BookList />
+      </ThemeContextProvider>
     </div>
   );
 }
